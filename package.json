@@ -1,0 +1,26 @@
+{
+  "name": "project",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "go": "npx nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "ejs": "^3.1.10",
+    "express": "^4.18.2",
+    "mongoose": "^8.13.2",
+    "morgan": "^1.10.0",
+    "qs": "^6.14.0",
+    "validator": "^13.15.0"
+  },
+  "description": "",
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}

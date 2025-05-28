@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Demo</title>
+  </head>
+  <body>
+    <div class="card">
+      <div style="background-color: aqua; font-family: monospace">
+        Welcome to Demo Api
+      </div>
+      <h1 id="movies" class="mvoies"></h1>
+    </div>
+    <script>
+      const movies = document.getElementById("movies");
+      const getData = async () => {
+        const response = await fetch("http://localhost:3000/api/movies");
+        const data = await response.json();
+        data.data.forEach((movie) => {
+          const h5 = document.createElement("h5");
+          h5.style.cssText =
+            "margin :10px; background-color :#ccc; padding:12px;border-radius: 10px;";
+          h5.textContent = `${movie.name} => ${movie.rating} => id: ${movie._id}`;
+          movies.append(h5);
+        });
+        console.log(data.data);
+      };
+      getData();
+    </script>
+  </body>
+</html>
